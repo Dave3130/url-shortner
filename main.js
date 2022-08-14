@@ -1,5 +1,6 @@
 // Information to reach API
 const url = 'https://api.rebrandly.com/v1/links';
+const apiKey = "ef569fae7b60430dad4392d9a63cd7c4";
 
 // Some page elements
 const inputField = document.querySelector('#input');
@@ -13,7 +14,7 @@ const shortenUrl = () => {
 
   const xhr = new XMLHttpRequest();
   xhr.responseType = 'json';
-  
+
   xhr.onreadystatechange = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
   		renderResponse(xhr.response);
@@ -21,7 +22,7 @@ const shortenUrl = () => {
   }
   xhr.open('POST', url);
   xhr.setRequestHeader('Content-type', 'application/json');
-	xhr.setRequestHeader('apikey', process.env.API_KEY);
+	xhr.setRequestHeader('apikey', apiKey);
   xhr.send(data);
 }
 
