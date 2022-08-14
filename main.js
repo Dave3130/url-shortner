@@ -1,5 +1,4 @@
 // Information to reach API
-const apiKey = 'ef569fae7b60430dad4392d9a63cd7c4';
 const url = 'https://api.rebrandly.com/v1/links';
 
 // Some page elements
